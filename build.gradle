@@ -14,7 +14,7 @@ apply plugin: 'java'
 apply plugin: 'idea'
 apply plugin: 'org.springframework.boot'
 
-defaultTasks = ["clean", "build", "installApp"]
+defaultTasks = ["clean", "build", "bootRun"]
 
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = 1.8
@@ -29,8 +29,4 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-web')
 	compileOnly('org.projectlombok:lombok')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
-}
-
-task stage {
-	dependsOn build
 }
