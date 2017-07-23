@@ -29,8 +29,7 @@ dependencies {
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
 
-task stage(dependsOn: ['build', 'clean', 'bootRun']) {
+task stage(dependsOn: ['build', 'clean']) {
 	build.mustRunAfter clean
-	bootRun.mustRunAfter build
 }
 
